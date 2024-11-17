@@ -175,7 +175,7 @@ index a4a660069..d819d3820 100644
  	umode_t dir_mode = nd->dir_mode;
  	kuid_t dir_uid = nd->dir_uid;
  
-++#ifdef CONFIG_KSU_SUSFS_SUS_PATH
++#ifdef CONFIG_KSU_SUSFS_SUS_PATH
 +	if (unlikely(inode->i_state & 16777216) && likely(current_cred()->user->android_kabi_reserved2 & 16777216)) {
 +		return -ENOENT;
 +	}
