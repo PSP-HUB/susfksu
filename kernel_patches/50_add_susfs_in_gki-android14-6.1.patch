@@ -945,7 +945,7 @@ index ef50573c7..933f01bb5 100644
  
 +#ifdef CONFIG_KSU_SUSFS_SUS_SU
 +	if (susfs_is_sus_su_hooks_enabled) {
-+		ksu_handle_stat(&dfd, &filename, &flags);
++		ksu_handle_stat(&dfd, (const char __user **)&filename->name, &flags);
 +	}
 +#endif
 +
